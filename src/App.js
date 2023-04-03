@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Lottie from 'lottie-react';
+import manrun from './media/manrun.json';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className='sky'>
+            <div className='manrun'>
+                <Lottie animationData={manrun} />
+            </div>
+            <div className='mountain'></div>
+            <div className='grass'>
+            </div>
+            <h1>Jogging</h1>
+        </div>
+        
+        
+    )
+};
 
 export default App;

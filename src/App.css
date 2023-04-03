@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sky{
+    height: 100vh;
+    background-image: url('./media/s.png');
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grass{
+    height: 600px;
+    background-image: url('./media/gh.png');
+    display: block;
+    width: 300%;
+    overflow-y: hidden;
+    position: absolute;
+    bottom: 0;
+    left: -2400px;
+    right: 0;
+    background-repeat: repeat-x;
+    animation: grass 15s linear infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes grass {
+    100%{
+        transform: translateX(2400px);
+    }
 }
 
-.App-link {
-  color: #61dafb;
+.mountain{
+    height: 600px;
+    background-image: url('./media/m.png');
+    display: block;
+    width: 300%;
+    overflow-y: hidden;
+    position: absolute;
+    bottom: 0;
+    left: -1400px;
+    right: 0;
+    background-repeat: repeat-x;
+    animation: mountain 30s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@keyframes mountain {
+    100%{
+        transform: translateX(1400px);
+    }
+}
+
+.manrun{
+    height: 300px;
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 50px;
+    color: blue;
+    font-family: sans-serif;
 }
